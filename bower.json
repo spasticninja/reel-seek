@@ -1,0 +1,22 @@
+{
+  "name": "reel-seek",
+  "version": "0.0.0",
+  "authors": [
+    "Allison Betancourt <allisonbbetancourt@gmail.com>"
+  ],
+  "description": "omdb lookup",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "angular": "~1.3.14",
+    "angular-route": "~1.3.14"
+  }
+}
