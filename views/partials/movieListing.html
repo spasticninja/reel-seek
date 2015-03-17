@@ -1,0 +1,12 @@
+<div ng-show="movie">
+  <h2>{{movie.Title}} <small>{{movie.Year}} | Rated: {{movie.Rated}}</small></h2>
+  <div class="col-sm-2">
+    <img ng-src="{{movie.Poster}}" class="img-responsive">
+  </div>
+  <div class="col-sm-10">
+    <p class="movie-subtitle">Directed: {{movie.Director}}</p>
+    <p class="movie-subtitle">Written: {{movie.Writer}} </p>
+    <p class="movie-subtitle">Staring: {{movie.Actors}}</p>
+    <p class="movie-content">{{movie.Plot}}</p>
+  </div>
+</div>

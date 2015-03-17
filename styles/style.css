@@ -1,4 +1,10 @@
 /***** Reel Seek ******/
 body,html{
-  
+
+}
+p.movie-subtitle{
+  margin:2px 0px 2px 0px;
+}
+p.movie-content{
+  margin:10px 0px 10px 0px;
 }
