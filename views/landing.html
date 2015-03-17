@@ -1,4 +1,8 @@
 <h1 class="page-header">Newest Movies</h1>
-<div class="jumbtron">
-  
+<div class="jumbtron" ng-show="result">
+  <h1>{{result.Title}}</h1>
+  <h2>{{result.Director}}</h2>
+</div>
+<div ng-hide="result">
+  <h1>Loading ...</h1>
 </div>
