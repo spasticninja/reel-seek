@@ -1,0 +1,19 @@
+<div ng-show="movie && movie.imdbID">
+  <h1 class="page-header">{{movie.Title}} <small>{{movie.Year}} | Rated: {{movie.Rated}}</small></h1>
+
+  <div class="col-sm-3">
+    <a href="http://www.imdb.com/title/{{movie.imdbID}}"><img ng-src="{{movie.Poster}}" class="img-responsive"></a>
+    <p class="text-center"><small>Click image to go to IMDb page</small></p>
+  </div>
+  <div class="col-sm-9">
+    <p class="movie-subtitle"><strong>Directed:</strong> {{movie.Director}}</p>
+    <p class="movie-subtitle"><strong>Written:</strong> {{movie.Writer}} </p>
+    <p class="movie-subtitle"><strong>Staring:</strong> {{movie.Actors}}</p>
+    <h5>Summary</h5>
+    <p class="movie-content">{{movie.Plot}}</p>
+    <h5>Awards & Nominations</h5>
+    <p class="movie-content">{{movie.Awards}}</p>
+    <h5>Ratings</h5>
+    <p class="movie-content">Metacritic: {{movie.Metascore}} | IMDb Rating: {{movie.imdbRating}} | Tomatometer: {{movie.tomatoMeter}}</p>
+  </div>
+</div>

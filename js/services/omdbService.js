@@ -42,7 +42,8 @@ angular.module('reel-seek').service('omdbService', ['$http', function($http){
     $http.get('http://www.omdbapi.com/?', {
       params: {
         'i': id,
-        'plot' : 'full'
+        'plot' : 'full',
+        'tomatoes' : 'true'
       }
     }).success(function(data, status, headers, config){
       callback(null, data);
