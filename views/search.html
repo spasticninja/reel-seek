@@ -12,21 +12,14 @@
   <button type="submit" class="btn btn-primary">Search Database</button>
 </form>
 
-<!-- <div class="row" ng-show="result">
-  <h2>{{result.Title}} <small>{{result.Year}} | Rated: {{result.Rated}}</small></h2>
-  <div class="col-sm-2">
-    <img ng-src="{{result.Poster}}" class="img-responsive">
-  </div>
-  <div class="col-sm-10">
-    <p class="movie-subtitle">Directed: {{result.Director}}</p>
-    <p class="movie-subtitle">Written: {{result.Writer}} </p>
-    <p class="movie-subtitle">Staring: {{result.Actors}}</p>
-    <p class="movie-content">{{result.Plot}}</p>
-  </div>
-</div> -->
-
-<listing movie="result"></listing>
+<div class="short-listing">
+  <listing movie="result"></listing>
+</div>
 
 <div ng-show="oops">
   <h2>{{oops}}</h2>
+</div>
+
+<div ng-show="results">
+  <h2>Searching...</h2>
 </div>

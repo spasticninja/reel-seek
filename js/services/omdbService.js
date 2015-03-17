@@ -39,7 +39,8 @@ angular.module('reel-seek').service('omdbService', ['$http', function($http){
   this.findMovieById = function(id, callback){
     $http.get('http://www.omdbapi.com/?', {
       params: {
-        'i': id
+        'i': id,
+        'plot' : full
       }
     }).success(function(data, status, headers, config){
       callback(null, data);
