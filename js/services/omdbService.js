@@ -1,6 +1,7 @@
 angular.module('reel-seek').service('omdbService', ['$http', function($http){
   this.findMovieByName = function(name, length, callback){
     $http.get('http://www.omdbapi.com/?', {
+      cache: true,
       params: {
         't': name,
         'plot' : length
@@ -13,6 +14,7 @@ angular.module('reel-seek').service('omdbService', ['$http', function($http){
   };
   this.findMovieByNameAndYear = function(name, year, length, callback){
     $http.get('http://www.omdbapi.com/?', {
+      cache: true,
       params: {
         't': name,
         'y': year,
@@ -40,7 +42,7 @@ angular.module('reel-seek').service('omdbService', ['$http', function($http){
     $http.get('http://www.omdbapi.com/?', {
       params: {
         'i': id,
-        'plot' : full
+        'plot' : 'full'
       }
     }).success(function(data, status, headers, config){
       callback(null, data);
