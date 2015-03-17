@@ -2,14 +2,26 @@ angular.module('reel-seek').controller('searchCtrl', ['$scope', '$log', 'omdbSer
   $scope.result = null;
 
   $scope.record = function(title, year){
-    omdbService.findMovieByName(title,function(error, result){
-    if(error){
-      return ;
+    if (year != null){
+      omdbService.findMovieByNameAndYear(title, year, 'short', function(error, result){
+      if(error){
+        return ;
+      }
+
+      $scope.result = result;
+      $scope.oops = result.Error;
+      });
+    }else{
+      omdbService.findMovieByName(title, 'short', function(error, result){
+      if(error){
+        $scope.error = result;
+        return ;
+      }
+
+      $scope.result = result;
+      $scope.oops = result.Error;
+      });
     }
-
-    $scope.result = result;
-
-    });
   };
 
 }]);
