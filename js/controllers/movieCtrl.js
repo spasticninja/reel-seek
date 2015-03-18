@@ -4,7 +4,7 @@ angular.module('reel-seek').controller('movieCtrl', ['$scope', '$log', 'grabIdSe
   var id = grabIdService.grabMovieId();
 
   //service call to find movie with IMDb ID
-  omdbService.findMovieById(id, function(error, result){
+  omdbService.findMovieById(id, 'full', 'true', function(error, result){
   if(error){
     return ;
   }

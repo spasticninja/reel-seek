@@ -41,12 +41,12 @@ angular.module('reel-seek').service('omdbService', ['$http', function($http){
     });
   };
   //Service to find movie by IMDb ID. This service defaults to get full summary and tomatoe meter ratings
-  this.findMovieById = function(id, callback){
+  this.findMovieById = function(id, length, tomatoes, callback){
     $http.get('http://www.omdbapi.com/?', {
       params: {
         'i': id,
-        'plot' : 'full',
-        'tomatoes' : 'true'
+        'plot' : length,
+        'tomatoes' : tomatoes
       }
     }).success(function(data, status, headers, config){
       callback(null, data);

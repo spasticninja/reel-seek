@@ -1,8 +1,17 @@
 <h1 class="page-header">Newest Movies</h1>
-<div class="jumbtron" ng-show="result">
-  <h1>{{result.Title}}</h1>
-  <h2>{{result.Director}}</h2>
-</div>
-<div ng-hide="result">
-  <h1>Loading ...</h1>
+<!--Result display-->
+<div>
+  <div ng-hide="oops || result" class="panel-body">
+    <h2>Searching ... </h2>
+  </div>
+
+  <!--Successful listing display-->
+  <ol>
+    <listing ng-repeat="movie in result.Search" movie="movie"></listing>
+  </ol>
+
+  <!--error-->
+  <div ng-show="oops" class="panel-body">
+    <h2>{{oops}}</h2>
+  </div>
 </div>
