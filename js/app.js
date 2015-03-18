@@ -1,3 +1,5 @@
+'use strict';
+
 angular.module('reel-seek', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider){
   $routeProvider.
