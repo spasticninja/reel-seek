@@ -6,6 +6,6 @@ angular.module('reel-seek').directive('listing', function(){
     scope: {
       movie: '=movie'
     },
-    templateUrl: '/views/partials/movieListing.html'
+    templateUrl: 'views/partials/movieListing.html'
   };
 });
