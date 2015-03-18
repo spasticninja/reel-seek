@@ -11,7 +11,7 @@ The movie page pulls up extended plot, rotten tomatoes ratings and more to displ
 ##Notes
 In the future, I'd like to add:
  * a top ten list for current movies to the front page, utilizing Metacritic's RSS feed.
- * display the front page films in a carousel for a better landing page UX.
+ * display the front page films in a carousel for a better landing page.
 
 ##License
 [MIT License](http://revolunet.mit-license.org/)
