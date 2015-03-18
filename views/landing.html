@@ -5,9 +5,15 @@
     <h2>Searching ... </h2>
   </div>
 
-  <ul>
-    <listing-landing ng-repeat="movie in result" movie="movie"></listing-landing>
+  <ul rn-carousel rn-carousel-controls class="image">
+    <li ng-repeat="movie in result">
+      <div class="layer">
+        {{movie.Poster}}
+      </div>
+    </li>
   </ul>
+
+  <listing-landing ng-repeat="movie in result" movie="movie"></listing-landing>
 
   <!--error-->
   <div ng-show="oops" class="panel-body">

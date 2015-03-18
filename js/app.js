@@ -1,4 +1,4 @@
-angular.module('reel-seek', ['ngRoute'])
+angular.module('reel-seek', ['ngRoute', 'angular-carousel'])
 .config(['$routeProvider', function($routeProvider){
   $routeProvider.
     when('/', {
