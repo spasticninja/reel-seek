@@ -1,4 +1,4 @@
-//movie listing directive for the long listing on Movie Page
+//movie listing directive for the landing page
 angular.module('reel-seek').directive('listingLanding', function(){
   return {
     restrict: 'E',

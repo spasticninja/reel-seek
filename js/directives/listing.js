@@ -1,4 +1,4 @@
-//movie listing directive for the short summary on search page
+//movie listing directive for the short listing on search page
 angular.module('reel-seek').directive('listing', function(){
   return {
     restrict: 'E',

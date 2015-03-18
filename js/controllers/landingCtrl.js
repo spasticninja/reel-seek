@@ -5,18 +5,16 @@ angular.module('reel-seek').controller('landingCtrl', ['$scope', '$log', 'omdbSe
   $scope.result=[];
 
   //for each entry in the array, run find movie by ID and push it to the array: $scope.result
-    for(var i = 0; i<length; i++){
-      omdbService.findMovieById(marvelPreview[i], 'short', 'false', function(error, result){
-        if(error){
-          return ;
-        }
+  for(var i = 0; i<length; i++){
+    omdbService.findMovieById(marvelPreview[i], 'short', 'false', function(error, result){
+      if(error){
+        return ;
+      }
 
-        //store result
-        $scope.result.push(result);
-        //there should not be an error, but if there is note it
-        $scope.oops = result.Error;
-      });
-    };
-
-
+      //store result
+      $scope.result.push(result);
+      //there should not be an error, but if there is note it
+      $scope.oops = result.Error;
+    });
+  };
 }]);

@@ -46,7 +46,7 @@ angular.module('reel-seek').service('omdbService', ['$http', function($http){
       params: {
         'i': id,
         'plot' : length,
-        'tomatoes' : tomatoes
+        'tomatoes' : tomatoes //rottentomatoes, needs 'true' or 'false'
       }
     }).success(function(data, status, headers, config){
       callback(null, data);

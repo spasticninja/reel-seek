@@ -5,13 +5,13 @@ angular.module('reel-seek').controller('movieCtrl', ['$scope', '$log', 'grabIdSe
 
   //service call to find movie with IMDb ID
   omdbService.findMovieById(id, 'full', 'true', function(error, result){
-  if(error){
-    return ;
-  }
+    if(error){
+      return ;
+    }
 
-  //store result
-  $scope.result = result;
-  //there should not be an error, but if there is note it
-  $scope.oops = result.Error;
+    //store result
+    $scope.result = result;
+    //there should not be an error, but if there is note it
+    $scope.oops = result.Error;
   });
 }]);

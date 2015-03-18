@@ -1,4 +1,4 @@
-<!-- Search Movie "page" -->
+<!-- Search Page -->
 <h1 class="page-header">Search Movies</h1>
 
 <!-- Form for search, will use function record in searchCtrl.js -->
@@ -16,6 +16,7 @@
 
 <!--Result display-->
 <div class="short-listing">
+  <!--Displayed when searching = true-->
   <div ng-show="searching">
     <h2>Searching ... </h2>
   </div>
@@ -25,7 +26,7 @@
     <listing ng-repeat="movie in result.Search" movie="movie"></listing>
   </ul>
 
-  <!--error-->
+  <!--Display error-->
   <div ng-show="oops">
     <h2>{{oops}}</h2>
   </div>
