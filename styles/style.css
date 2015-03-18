@@ -22,6 +22,16 @@ footer{
   background: rgba(0,0,0,0.4);
 }
 
+/****** Form ***********/
+form{
+  margin-bottom:60px;
+}
+
+/******* Landing page blurb ******/
+.blurb{
+  margin:10px 0px 10px 0px;
+}
+
 /****** Movie Listing Style ******/
 p.movie-subtitle{
   margin:2px 0px 2px 0px;

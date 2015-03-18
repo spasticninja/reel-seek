@@ -1,10 +1,14 @@
-<div class="row" ng-show="movie && movie.imdbID">
+<div class="row blurb" ng-show="movie && movie.imdbID">
   <div class="col-sm-2">
     <a ng-href="/#/movie/{{movie.imdbID}}"><img ng-src="{{movie.Poster}}" class="img-responsive"></a>
   </div>
   <div class="col-sm-10">
     <h4><a ng-href="/#/movie/{{movie.imdbID}}">{{movie.Title}}</a> <small>{{movie.Year}} | {{movie.Type}}</small></h4>
-    <p>{{movie.Plot}}</p>
+    <p class="movie-subtitle"><strong>Directed:</strong> {{movie.Director}}</p>
+    <p class="movie-subtitle"><strong>Written:</strong> {{movie.Writer}} </p>
+    <p class="movie-subtitle"><strong>Staring:</strong> {{movie.Actors}}</p>
+    <h5>Summary</h5>
+    <p class="movie-content">{{movie.Plot}}</p>
     <a ng-href="#/movie/{{movie.imdbID}}" class="btn btn-primary">Click for more detail</a>
   </div>
 </div>

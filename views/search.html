@@ -15,8 +15,8 @@
 </form>
 
 <!--Result display-->
-<div class="short-listing panel">
-  <div ng-show="searching" class="panel-body">
+<div class="short-listing">
+  <div ng-show="searching">
     <h2>Searching ... </h2>
   </div>
 
@@ -26,7 +26,7 @@
   </ul>
 
   <!--error-->
-  <div ng-show="oops" class="panel-body">
+  <div ng-show="oops">
     <h2>{{oops}}</h2>
   </div>
 </div>
