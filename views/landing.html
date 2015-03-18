@@ -1,14 +1,13 @@
-<h1 class="page-header">Newest Movies</h1>
+<h1 class="page-header">Marvel Movie Showcase</h1>
 <!--Result display-->
 <div>
   <div ng-hide="oops || result" class="panel-body">
     <h2>Searching ... </h2>
   </div>
 
-  <!--Successful listing display-->
-  <ol>
-    <listing ng-repeat="movie in result.Search" movie="movie"></listing>
-  </ol>
+  <ul>
+    <listing-landing ng-repeat="movie in result" movie="movie"></listing-landing>
+  </ul>
 
   <!--error-->
   <div ng-show="oops" class="panel-body">

@@ -1,0 +1,6 @@
+<li class="list-group-item">
+  <div ng-show="movie && movie.imdbID">
+    <img ng-src="{{movie.Poster}}" class="img-responsive">
+    <h4><a ng-href="/#/movie/{{movie.imdbID}}">{{movie.Title}}</a> <small>{{movie.Year}} | {{movie.Type}}</small></h4>
+  </div>
+</li>
