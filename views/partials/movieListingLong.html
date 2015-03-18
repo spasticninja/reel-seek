@@ -1,10 +1,13 @@
 <div ng-show="movie && movie.imdbID">
   <h1 class="page-header">{{movie.Title}} <small>{{movie.Year}} | Rated: {{movie.Rated}}</small></h1>
 
+  <!--Movie poster with link to IMDb page-->
   <div class="col-sm-3">
     <a href="http://www.imdb.com/title/{{movie.imdbID}}"><img ng-src="{{movie.Poster}}" class="img-responsive"></a>
     <p class="text-center"><small>Click image to go to IMDb page</small></p>
   </div>
+
+  <!-- Movie Information & ratings -->
   <div class="col-sm-9">
     <p class="movie-subtitle"><strong>Directed:</strong> {{movie.Director}}</p>
     <p class="movie-subtitle"><strong>Written:</strong> {{movie.Writer}} </p>

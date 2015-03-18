@@ -1,5 +1,7 @@
+<!-- Search Movie "page" -->
 <h1 class="page-header">Search Movies</h1>
 
+<!-- Form for search, will use function record in searchCtrl.js -->
 <form class="form-inline" ng-submit="record(form.title, form.year)" role="form">
   <div class="form-group">
     <label for="title">Title</label>
@@ -12,10 +14,19 @@
   <button type="submit" class="btn btn-primary">Search Database</button>
 </form>
 
-<div class="short-listing">
-  <listing movie="result"></listing>
-</div>
+<!--Result display-->
+<div class="short-listing panel">
+  <div ng-hide="oops || result" class="panel-body">
+    <h2>Searching ... </h2>
+  </div>
 
-<div ng-show="oops">
-  <h2>{{oops}}</h2>
+  <!--Successful listing display-->
+  <ul class="list-group">
+    <listing ng-repeat="movie in result.Search" movie="movie"></listing>
+  </ul>
+
+  <!--error-->
+  <div ng-show="oops" class="panel-body">
+    <h2>{{oops}}</h2>
+  </div>
 </div>
